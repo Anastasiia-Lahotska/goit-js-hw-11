@@ -7,12 +7,116 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 0;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 300px;
+  height: 40px;
+  padding: 0 12px;
+  font-size: 16px;
+  line-height: 1.4;
+  border: 1px solid #ccc;
+  
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]::placeholder {
+  color: #999;
+}
+
+input[type="text"]:hover {
+  border-color: #888;
+}
+
+input[type="text"]:focus {
+  border-color: #4e75ff;
+}
+
+button.search {
+  height: 40px;
+  padding: 0 16px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #4e75ff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+button.search:hover {
+  background-color: #6c8cff;
+  border-color: #6c8cff;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.gallery-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.loader {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+}
+
+.loader.visible {
+  display: flex;
+}
+
+.loader.visible::before {
+  content: '';
+  width: 48px;
+  height: 48px;
+  border: 5px solid #999;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
