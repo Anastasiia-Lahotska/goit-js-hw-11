@@ -27,7 +27,7 @@ body {
 }
 
 input[type="text"] {
-  width: 300px;
+  width: 272px;
   height: 40px;
   padding: 0 12px;
   font-size: 16px;
@@ -52,6 +52,7 @@ input[type="text"]:focus {
 }
 
 button.search {
+  width: 91px;
   height: 40px;
   padding: 0 16px;
   background-color: #4e75ff;
@@ -59,7 +60,7 @@ button.search {
   font-size: 16px;
   font-weight: 500;
   border: 1px solid #4e75ff;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s, border-color 0.2s;
 }
